@@ -1,0 +1,1933 @@
+KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY
+(AN AUTONOMOUS INSTITUTION)
+Accredited by NBA & NAAC, Approved by AICTE, Affiliated to JNTUH,
+Narayanguda, Hyderabad, Telangana – 500029
+DEPARTMENT OF INFORMATION TECHNOLOGY
+LAB RECORD
+SOFTWARE ENGINEERING LAB
+B. Tech. III YEAR I SEM (KR23)
+ACADEMIC YEAR 2025-26
+KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY
+(AN AUTONOMOUS INSTITUTE)
+Accredited by NBA & NAAC, Approved by AICTE, Affiliated to JNTUH, Hyderabad
+Narayanguda, Hyderabad, Telangana – 500029
+Certificate
+This is to certify that following is a Bonafide Record of the workbook task done by ____________________________bearing Roll No________________ of _______________ Branch of ___________ year B. Tech. Course in the_________________________________ Subject during the Academic year ____________ & __________ under our supervision.
+Number of week tasks completed: ___________________________________________
+Signature of Staff Member Incharge Signature of Head of the Dept.
+Signature of Internal Examiner Signature of External Examiner
+KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY
+(AN AUTONOMOUS INSTITUTE)
+Accredited by NBA & NAAC, Approved by AICTE, Affiliated to JNTUH, Hyderabad
+Narayanguda, Hyderabad, Telangana – 500029
+Daily Laboratory Assessment Sheet
+Name of the Lab: Student Name: Branch & Section: HT. No:
+Sr. No.
+Name of the Experiment
+Date
+Observation Marks (5M)
+Record Marks (5M)
+Viva Voice Marks(10M)
+Total Marks (20M)
+Signature of Faculty
+Total
+Faculty Incharge
+INDEX
+Sr. NO.
+CONTENTS
+PAGE
+NO.
+1.
+Software Installation & SRS Document
+a.
+Abstract
+b.
+Functional Requirements (FR)
+c.
+Non-Functional Requirements (NFR)
+d.
+User Identification
+e.
+Workflow of Each User
+f.
+Use Cases
+2.
+Exploring git local and remote commands on the multi-folder project
+a.
+Pushing multi-folder project into private repository (by student).
+b.
+Students must explore all listed git commands on the multi-folder project in local and remote repository.
+c.
+Students must explore all git commands on given scenario-based question
+3.
+Collaborative coding using git
+a.
+To work on collaborative coding by:
+b.
+Creating Organization.
+c.
+Coordinating with others through a shared repository
+d.
+To resolve conflicts when collaborating on same part of code.
+e.
+To create and apply patch.
+4.
+Build and package Java and Web applications using Maven
+a.
+Understand the structure and lifecycle of a Maven project.
+b.
+Build and package Java and Web applications using Maven.
+c.
+Add dependencies using pom.xml, compile and test using plugins.
+d.
+Resolve errors and conflicts arising from dependency mismatches.
+e.
+Work with parent and multi-module Maven projects.
+f.
+Generate executable JARs and deployable WARs using Maven.
+5.
+Docker CLI commands
+a.
+Learn how to pull, run, stop, start, remove, and inspect containers and images.
+b.
+Gain the ability to create, monitor, and troubleshoot running containers.
+c.
+Configure and manage networks for container communication.
+d.
+Create and manage persistent storage for containers.
+e.
+Learn how to list, remove, and manage images efficiently.
+6.
+Docker
+a.
+Learn how to define and run multiple interdependent services (e.g., web server, database) in a single configuration file.
+b.
+Gain skills in writing and interpreting docker-compose.yml files for service setup.
+c.
+Deploy the same setup across different machines without manual configuration.
+d.
+Configure container networking and persistent storage within Compose.
+e.
+Reduce setup time and enable faster iteration during application development.
+7.
+Creating a Multi-Module Maven Project
+a.
+Build and package Java and Web applications using Maven.
+b.
+Add dependencies using pom.xml, compile and test using plugins.
+c.
+Resolve errors and conflicts arising from dependency mismatches.
+d.
+Work with parent and multi-module Maven projects.
+e.
+Generate executable JARs and deployable WARs using Maven
+8.
+Jenkins Automation
+a.
+Hands-on practice on manual creation of Jenkins pipeline using Maven projects from Github
+b.
+Create the job and build the pipeline for maven-java and maven-web project.
+9.
+Pipeline Creation using script
+a.
+Evaluation of Jenkins pipeline.
+b.
+WORKING ON BUILD TRIGGERS FOR LAST JENKINS PIPILINE
+c.
+Hands-on practice on creation of scripted Jenkins pipeline.
+d.
+Take the screenshots for above task
+10.
+Working with minikube and Nagios
+a.
+Hands-on practice of creating, running and scaling pods in minikube.
+b.
+Running Nginx server on specified port number by explaining the Nginx monitoring tool
+c.
+Running Nagios server and Understanding the Monitoring tool using Docker.
+d.
+AWS-free Trier account Creation steps
+11.
+Jenkins-CI/CD
+a.
+CI-Continuous Integration using Webhooks.
+b.
+Sending E-mail Notification on Build Failure or success
+12.
+Creation of virtual machine for Ubuntu OS and Deploying the web application
+1. Creation of virtual machine
+2. Deploying the web application
+3. Accessing it publicly
+LAB LESSON PLAN FOR WEEK 1
+Lab Topics:
+•
+Installation of Eclipse and other software (Installation PDF is available and will be shared before lab.)
+•
+Downloading Maven and Configuring
+•
+Student has to prepare on III/I project topic the following:
+✓
+Abstract
+✓
+Functional requirement
+✓
+Non- Functional requirement
+✓
+Identify user of application
+✓
+Modules in application
+✓
+Use case diagram
+•
+Use case diagram
+Unified Modeling Language (UML) diagrams are a way to visualize systems and software. It helps the software engineers understand designs and proposed implementation of complex software systems. UML (Unified Modeling Language) diagrams are categorized into two main types: Structural diagrams and Behavioral diagrams. These diagrams serve to model different aspects of a system, from its architecture and components to its behaviour and interactions.
+Software Requirements Specification (SRS): Project Title: Gen AI in Education - Personalized Quiz and Content Generator Using LLM.
+•
+Abstract: This project develops an AI-based system that uses Large Language Models (LLMs) to generate personalized quizzes and tests from educational content. It adapts questions to each student’s learning level and performance, providing instant feedback and explanations. The system helps educators track progress and tailor instruction, enhancing learning outcomes through intelligent assessment.
+•
+Functional Requirements:
+a.
+User Registration & Authentication: Students, teachers, and admins can register and log in securely.
+b.
+Content Upload: Teachers can upload educational materials (PDFs, notes, transcripts).
+c.
+Content Processing: The system extracts key concepts from uploaded content using LLM.
+d.
+Personalized Quiz Generation: LLM generates quizzes tailored to each student’s learning profile and content.
+e.
+Quiz Attempt and Submission: Students can take quizzes and submit answers through the platform.
+f.
+Feedback Generation: The system provides instant feedback and explanations for each question.
+g.
+Performance Tracking: Student scores, accuracy, and progress are stored and visualized.
+h.
+Teacher Dashboard: Teachers can view student analytics and quiz content.
+i.
+Admin Controls: Admins can manage users, content repositories, and LLM configuration.
+j.
+LLM API Integration: The system connects to external LLM services (e.g., OpenAI API) for generational tasks.
+•
+Non-Functional Requirements:
+1.
+Usability: The interface should be user-friendly and intuitive for all users.
+2.
+Performance: Quiz generation time should be under 5 seconds.
+3.
+Scalability: The system should support 1,000+ concurrent users.
+4.
+Security: All data should be encrypted; authentication must be secure.
+5.
+Availability: The system should have at least 99.9% uptime.
+6.
+Maintainability: Codebase should be modular and well-documented for future updates.
+7.
+Compatibility: Must work on desktops, tablets, and smartphones.
+•
+Use Cases:
+1.
+User Registration and Login: Users (students, teachers, admins) create accounts and securely log in.
+2.
+Content Upload: Teachers upload educational materials such as PDFs, notes, and transcripts.
+3.
+Content Processing: The system processes uploaded content to extract key concepts using LLM.
+4.
+Personalized Quiz Generation: The system generates quizzes tailored to each student’s learning progress and content.
+5.
+Quiz Attempt: Students take personalized quizzes within the platform.
+6.
+Instant Feedback and Explanation: After quiz submission, students receive AI-generated feedback and detailed explanations.
+7.
+Performance Tracking: The system records student quiz scores and tracks progress over time.
+8.
+Teacher Analytics Dashboard: Teachers view student performance reports
+and quiz results.
+9.
+Quiz Review and Approval: Teachers can review and edit AI-generated quizzes before assigning them.
+10.
+User Management: Admins manage users, roles, and access permissions.
+11.
+System and LLM Configuration: Admins configure LLM settings and integration parameters.
+•
+Workflow Diagram:
+Task : Students must explore all git commands on given scenario-based question. (Note student write command in observation book and paste the answer (git command) below each question for uploading).
+Scenario based questions on basic git commands
+1. You made changes to one file in the above project but haven’t staged them yet. You realize they were a mistake. What Git command will you use to discard the local changes?
+git checkout -- <filename>
+2. You accidentally ran git add file1.txt (note instead of file.txt consider one file from above project), but you’re not ready to commit yet. How do you remove it from the staging area without losing the changes?
+git reset file1.txt
+3. You made a commit but typed the wrong commit message. You haven’t pushed it yet. How do you fix it?
+git commit --amend
+4. You want to view the commit history of the current branch in a readable format. What Git command should you use?
+git log --oneline --graph
+5. After cloning a repo, how can you set your name and email globally for all Git repositories?
+git config --global user.name "Name"
+git config --global user.email "Mail Id"
+6. You’ve made some edits to your files but haven’t staged them. How can you view the changes?
+git diff
+7. You’re on the main branch but need to switch to feature/login. What command do you
+git checkout -b feature -branch
+8. You deleted the feature-ui branch by mistake. You haven’t pushed the deletion. How
+git branch -d feature-branch
+9. You’ve made some commits locally and now want to upload them to the remote repository. What do you run?
+git push
+10. How can you fetch the latest changes from the remote repository without merging them automatically?
+git fetch
+11. You’re on the main branch and want to start working on a new feature called search-filter. What command do you use?
+git checkout -b search-filter
+12. You committed a file containing an API key and want to completely remove it from the repo's history. What should you do?
+git filter-branch --force
+13. You want to see all the branches that exist both locally and on the remote. What
+git branch -a
+14. You’re on main and want to merge the completed feature/signup branch into it. What command do you use?
+git merge feature/signup
+15. You tried to merge two branches and Git reported a conflict in app.js. What are the general steps to resolve it?
+git add app.js
+git commit
+16. You don’t want Git to track changes to .log files or node_modules/. How do you achieve this?
+echo "*.log" >>.gitignore
+echo "node_modules/".gitignore
+17. You're investigating a bug and want to know who last changed line 25 in script.py. What command do you use?
+git blame -L 25,25 script.py
+18. You’re in the middle of working on a file but need to switch branches quickly. What do you do to save your work?
+git stash
+19. You previously ran git stash and now want to restore those changes. What command do you use?
+git stash pop
+20. The feature/test branch is no longer needed. How do you delete it locally?
+git branch -d feature/test
+21. You just merged the feature-ui branch into main. You want to clean up your local branches. How do you safely delete feature-ui?
+git reset file1.txt
+22. You created a branch feature-experiment, made some changes, but now realize the code is no longer needed. You want to delete it, even though it hasn’t been merged. What command will you use?
+git branch -D featureexperiment
+23. You're currently on the feature-login branch and want to delete feature-ui. What must you ensure before running the delete command?
+git checkout main
+git branch -d feature-ui
+24. You want to delete bugfix-footer, but you're unsure if it's been merged. What should you do before deleting it?
+git branch --merged | grep
+25. You finished working on feature-a, feature-b, and feature-c. All have been merged into main. How do you delete them in one command?
+Scenario based questions on working with remote repository using Git commands
+1. Specify the git command when you're starting work on a project and need to clone a remote repository to your local machine.
+git clone <repo url>
+2. Specify the git command if you want to see the remotes that are connected to your local repository.
+git remote -v
+3. Specify the git command if you want to add a new remote repository to your local repository.
+git remote add <name> <url>
+4. Specify the git command to remove a remote repository from your local configuration:
+git remote remove <name>
+5. Specify the git command if you want to rename an existing remote:
+git remote rename <old-name><new-name>
+6. Specify the git command to fetch updates from the remote repository but not merge them into your local branch.
+git fetch
+7. Specify the git command to pull the latest changes from the remote repository and merge them into your local branch.
+git pull
+8. Specify the git command to push your local commits to a remote repository.
+git push
+9. Specify the git command to when pushing for the first time and want to set the remote branch you are pushing to.
+git push -u origin main
+10. Specify the git command to change the URL of a remote (e.g., after changing the remote repository address).
+git remote set -url origin https://github.com/url
+11. Specify the git command if you want to list all branches on the remote repository.
+git branch -r
+12. Specify the git command if a branch was deleted on the remote but still shows up locally.
+git fetch -p
+13. Specify the git command to fetch a specific branch from a remote.
+git fetch <remotename><branchname>
+14. Specify the git command if you want to see detailed information about a remote repository.
+git remote show <remotename>
+15. Specify the git command if you want to rebase your local branch onto a remote branch (this can be useful to keep your history linear)
+git pull --rebase origin <branchname>
+Conclusion:
+Successfully uploading a multi-folder project to both public and private GitHub repositories demonstrates student’s practical understanding of core Git commands and remote repository management. By handling diverse file types (e.g., images, Java files, web pages, and pom.xml) and pushing them to different remote repositories, students show proficiency in:
+•
+Initializing and configuring Git repositories
+•
+Staging, committing, and managing version history
+•
+Connecting to and working with multiple remote repositories
+•
+Handling Gitignore and tracking large files appropriately
+•
+Applying best practices for public vs. private repository usage
+Completing these tasks equips students with essential version control skills and the ability to collaborate securely and professionally. It also reflects their readiness to contribute effectively to real-world software projects where source code management, team coordination, and secure code sharing are vital.
+LAB ACTION PLAN FOR WEEK 3
+Objective:
+1.
+To work on collaborative coding by:
+a.
+Creating Organization.
+b.
+Coordinating with others through a shared repository
+2.
+To resolve conflicts when collaborating on same part of code.
+3.
+To create and apply patch
+4.
+Students need to make note in observation book and also upload the screenshots of above executed exercise and scenario-based question.
+1.
+Collaborative coding. Code collaboration refers to the process of multiple people working together on the same codebase.
+There are two ways of collaborative coding:
+a.
+Creating Organization
+b.
+Coordinating with others through a shared repository
+a.
+Facilitating Collaborative Work by creating Organization Organization - Organizations are shared accounts where businesses and open-source projects can collaborate across many projects at once. Owners and administrators can manage member access to the organization's data and projects with sophisticated security and administrative features. Steps to facilitate collaborative work by creating organization are: Step 1: Click on New organization in Git hub Click on Create a free organization.
+Step 2: Set up your organization by entering the details like name, associated email, account verification, etc.
+Click on Next
+Step 3: Complete the setup by
+✓
+adding members to the group.
+✓
+Now, the invitation goes to other collaborator and they must accept.
+✓
+Next click on complete setup
+✓
+Goto Github and click on Settings → Member privileges → Base permissions → Select write → change base permission to “Write” Next under, Projects base permissions → Select Write → change base permission to “Write”
+Step 4: Create the remote repository for storing the project related files in Organization. This repository is accessible to every member of the team as per the permissions given.
+Note: The repository can be made private so that it is accessible only to the group members rather than being in a public domain.
+Now all the members of the team can contribute to the development of the project and the different files with all the versions and modification notices will be available in the respective repositories and is accessible to all the members
+b.
+To collaborate effectively on GitHub shared repository by sharing code and coordinating with others through a shared repository.
+→Steps for Collaborator 1 are: (collaborator-1 has repository that he wants to share with
+collaborator-2)
+✓
+Go to Settings > collaborators
+✓
+Now in Manage Access click on Add people
+✓
+Now you will be able to see ONE collaborator added
+✓
+After this invitation goes to collaborator 2 and they need to accept it.
+→Steps for Collaborator 2 are:
+✅ 1. Set Up Git and GitHub
+In git bash
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+Note : run $ git remote -v
+If origin git@github.com:OrgYOG/commonREPO.git (fetch)
+origin git@github.com:OrgYOG/commonREPO.git (push)
+then
+$ git remote –v // Note now, not connected to any remote
+✅ 2. Goto Git hub and copy url of shared repository by collaborator 1
+•
+Copy url (option 1)
+•
+If you're contributing to an existing project: (option 2)
+Visit the repository page and click Fork (if you don’t have write access)
+✅ 3. Clone the Repository
+Get a local copy of the repo:
+In git bash
+git clone https://github.com/username/repository-name.git
+cd repository-name
+✅ 4. Create a Branch for Your Work
+Always work on a separate branch:
+In git bash
+git checkout -b feature/your-feature-name
+✅ 5. Make Changes and Commit
+Edit files, then stage and commit your changes:
+In git bash to existing file / new file
+git add .
+git commit -m "Add a clear and descriptive commit message"
+✅ 6. Push Your Branch to GitHub
+➔
+In git bash
+➔
+git push origin feature/your-feature-name
+Note: Following steps needed if you forked from any public repository to contribute (option 2)
+✅ 7. Open a Pull Request (PR)
+•
+Go to the GitHub repo in your browser
+•
+Click Compare & pull request
+•
+Add a meaningful title and description
+•
+Submit the pull request for review
+✅ 8. Review and Discuss Changes
+•
+Collaborators can comment, request changes, or approve the PR(Pull Request)
+•
+Make edits if needed and push again; they will update the PR automatically
+✅ 9. Merge the Pull Request (has to be done by both collaborators)
+Once approved:
+•
+The repo owner can click Merge pull request
+•
+Or you can squash and merge, depending on the team’s workflow
+✅ 10. Keep Your Branch Updated (has to be done by owner collaborator 1)
+Before making new changes:
+In git bash
+git checkout main
+git pull origin main
+git checkout feature/your-new-feature
+git merge main
+2.
+To resolve conflicts when collaborating on same part of code.
+Resolving conflicts when collaborating with GitHub (or Git in general) is a normal part of team development. Conflicts happen when two people make changes to the same part of the code, and Git doesn't know which version to keep.
+✅ Steps to Resolve a Conflict
+1. See Which Files Are in Conflict (Say f1.txt)
+In git bash
+git status
+Conflicted files will be marked like:
+In git bash
+both modified: (Say f1.txt)
+3. Open the File and Look for Conflict Markers by clicking on
+✓ Click on Resolve Conflict
+Git will insert conflict markers in the file like this:
+def greet():
+<<<<<<< HEAD
+print("Hello from First collaborator ")
+=======
+print("Hello from second collaborator ")
+>>>>>>> feature/second collaborator branch
+This shows the two conflicting changes:
+•
+HEAD is your version
+•
+The section below ======= is the other branch’s version or second collaborator branch version
+3. Edit the File to Fix the Conflict
+✓
+Choose one version or combine them:
+def greet():
+print("Hello from First collaborator ")
+print("Hello from second collaborator ")
+✓
+Then delete all the conflict markers (<<<<<<<, =======, >>>>>>>).
+4. Mark the Conflict as Resolved
+Once you've edited and saved the file:
+✓
+git add f1.txt
+5. Complete the Merge or Pull
+✓
+git commit # Only needed if you're merging
+Or if you're rebasing:
+✓
+git rebase --continue
+If You Want to Abort the Merge
+If it gets messy and you want to cancel:
+git merge --abort
+Here below screen shot shows conflict raised when collaborator 1 wanted to merge changes to same line that already collaborator 2 added the line of code at that line in same file but in their own branch.
+Example :
+Merge Conflict – Changes made to a file by two different users leads to merge conflict as below.
+Say I am collaborator 2, now
+➔
+Accept invitation from collaborator 1
+➔
+Next goes to Shared repository by collaborator 1 (say abcrepo)
+➔
+Now open Git bash and clone the shared repo as below steps
+Step 1: first connect to this “abcrepo” to local repository by clone
+✓
+Now change directory to “abcrepo”
+✓
+Switch to branch feature-abc
+✓
+Now add line in README.md file
+✓
+Now git add, commit
+✓
+Now see status and push to remote branch feature-abc
+✓
+Now go to Github and refresh or click on “abcrepo”, you can see README.md
+Step 2: Now collaborator 2 adding line in README.md, save, git add, commit, push. No conflicts
+Step 3: Also collaborator 1 adding line in README.md at same line collaborator 2 added, then git add, commit, push gives merge conflict.
+Now open file, Edit the File to Fix the Conflict by keeping either or both collaborator changes and remove conflict markers. Add file, commit, and push.
+3.
+To create and apply patch A patch in Git is a text file that represents changes between two sets of files, or commits. It's essentially the output of the git diff command, packaged in a format that can be applied to another set of files.
+Steps: 1. Goto github and take public project url
+2. Clone into git bash
+3. Now open file and edit it, add, commit
+4. Run git log
+5. Create patch with commit hash code as:
+git format-patch -1 commit-hash-code
+This creates 0001-commit-from-cloned-person.patch file.
+Note: git format-patch -1 <commit-hash>
+•
+-1 means "create a patch from 1 commit"
+•
+This creates a .patch file for a single commit.
+•
+Example:
+git format-patch -1 abc1234
+•
+This creates a file like 0001-Your-commit-message.patch
+To create patches for the last 3 commits: git format-patch -3
+or
+Create patches from multiple commits
+git format-patch <base_commit>..HEAD
+6. Get the path of above patch file and email or what’s up to the remote owner of file.
+7. Once the remote owner gets the patch file 0001-commit-from-cloned-person.patch next the owner need to apply patch file in his git bash using git command below:
+Syntax:
+git apply my-changes.patch
+Or, if it's a patch made by git format-patch, use:
+git am 0001-Your-commit-message.patch
+✓
+git apply 0001-Your-commit-message.patch
+4. Scenario based questions on working with remote repository
+1. You've cloned a repository and made some changes to a local branch. Now you want to push these changes to the remote repository, but you're getting an error saying "rejected - non-fast-forward." How would you resolve this?
+⚫
+Answer:
+Run: git pull --rebase origin branch-name Resolve any conflicts, then: git push origin branch-name
+2. You’ve been working on a feature branch, and now you need to push it to the remote repository. However, the remote repository already has a main branch. How do you push your feature branch without affecting the main branch?
+⚫
+Answer:
+Run: git push origin feature-branch-name
+3. You cloned a remote repository, but after a while, the repository’s structure changed and new branches were added. How would you keep your local repository updated with the latest changes from the remote repository?
+⚫
+Answer:
+Run: git fetch --all git checkout new-branch-name
+4. A colleague has pushed some changes to the main branch, but you have local changes in the same branch. You want to pull their changes, but you want to avoid merge conflicts. What steps would you take?
+⚫
+Answer:
+Run: git add . git commit -m "your changes" git pull --rebase origin main
+5. You accidentally pushed a sensitive file (e.g., API keys) to the remote repository. How would you fix this situation?
+⚫
+Answer:
+Run: git rm --cached sensitive_file Add to .gitignore, commit. Use git filter-repo or BFG to clean history. git push --force
+6. You’re working on a feature branch, and your manager requests that you integrate the latest changes from main into your feature branch. What steps would you take?
+⚫
+Answer:
+Run: git checkout feature-branch git pull origin main
+7. You cloned a remote repository, but later you find that you need to push your changes to a different remote repository. How do you configure your local repository to push to this new remote?
+⚫
+Answer:
+Run: git remote set-url origin new-url git push -u origin branch-name
+8. After running git pull, you notice that your local branch is behind the remote branch. How would you proceed to bring your local branch up to date without losing your local changes?
+⚫
+Answer:
+Stash or commit local changes first, then: git pull --rebase origin branch-name
+9. You’re working on a project with multiple collaborators, and you notice that your local changes conflict with changes that have been pushed by others. How would you resolve the conflicts?
+⚫
+Answer:
+Run: git pull --rebase origin branch-name Resolve conflicts, then: git add . git rebase --continue
+10. You’ve pushed a feature branch to a remote repository, but now you need to delete the branch from the remote. How would you do that?
+⚫
+Answer:
+Run: git push origin --delete feature-branch-name.
+Scenario:
+You are working on a collaborative project hosted on GitHub with a team of four developers. The main branch is main, and each developer works on their own feature branches.
+You are assigned to implement a new UI component in a branch called feature/ui-update. Meanwhile, another team member has made a critical bug fix and pushed it directly to the main branch. When you try to push your changes, your push fails due to upstream changes.
+Additionally, a teammate has submitted a patch file with a small CSS fix and shared it via email. You need to apply the patch, test it, and merge everything into main without breaking any functionality.
+11. What command will you use to bring your local main branch up to date with the remote repository before merging it into your feature branch?
+⚫
+Answer:
+Run: git checkout main git pull origin main
+12. How will you update your feature/ui-update branch to reflect the latest changes from main?
+⚫
+Answer:
+Run: git checkout feature/ui-update git merge main
+13. Which command should you use to attempt pushing your local feature branch again, and what should you do if it fails due to conflicts?
+⚫
+Answer:
+Run: git push origin feature/ui-update If conflicts occur, resolve them, commit, and push again.
+14. How do you apply a .patch file provided by your teammate and include it in your commit history?
+⚫
+Answer:
+Run: git am 0001-Your-commit-message.patch
+15. After successful testing, describe the steps (with commands) to merge your feature branch into main and push it to GitHub.
+⚫
+Answer:
+Run: git checkout main git pull origin main git merge feature/ui-update git push origin main
+Conclusion:
+The effective use of Git in student collaborative projects promotes teamwork, organization, and clear communication, allowing students to manage code efficiently and track contributions accurately. By following structured Git workflows and best practices—such as regular commits, feature branching, and resolving conflicts early—students gain valuable experience in real-world development processes. This not only enhances their technical skills but also prepares them for professional teamwork in software engineering, where version control and collaboration are essential. Ultimately, mastering Git empowers students to deliver cleaner, more reliable code and succeed in collaborative environments.
+LAB ACTION PLAN FOR WEEK 4
+Objective:
+To enable students to:
+•
+Understand the structure and lifecycle of a Maven project.
+•
+Build and package Java and Web applications using Maven.
+•
+Add dependencies using pom.xml, compile and test using plugins.
+•
+Resolve errors and conflicts arising from dependency mismatches.
+•
+Work with parent and multi-module Maven projects.
+•
+Generate executable JARs and deployable WARs using Maven.
+Students must document observations, include screenshots of executions, and answer scenario-based questions after completing the tasks.
+•
+Understanding Maven Project Structure
+Maven standardizes the project structure for both Java and web-based applications. src/
+├── main/
+│ ├── java/ → Application source code
+│ └── resources/ → Configuration files like config.properties
+└── test/
+├── java/ → Unit test source code
+└── resources/ → Test resources
+The compiled files and reports are generated in the target/ directory after a successful build.
+•
+Steps to Perform Maven Build and Testing
+----mvn clean install
+•
+clean: Deletes the previous build (target/ folder)
+•
+install: Builds, tests, and installs the package to local .m2 repository
+After execution:
+•
+target/ folder contains compiled .class files and the final .jar or .war
+•
+Artifact is stored in: ~/.m2/repository/groupId/artifactId/version/
+Add a Dependency (e.g., Gson):
+In pom.xml:
+<dependency>
+<groupId>com.google.code.gson</groupId>
+<artifactId>gson</artifactId>
+<version>2.10</version>
+</dependency>
+After running:
+mvn clean install
+Check:
+•
+Gson JAR is downloaded to .m2/repository/com/google/code/gson/gson/
+•
+If version is wrong or not found → BUILD FAILURE with dependency resolution error
+•
+Configure Java Version via Compiler Plugin
+In pom.xml:
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>3.11.0</version>
+<configuration>
+<source>17</source>
+<target>17</target>
+</configuration> </plugin>
+Check:
+•
+Run mvn package
+•
+Inspect generated JAR: jar tf target/myapp.jar
+•
+JUnit Testing and Reports
+Place test files in src/test/java. Example:
+public class AppTest {
+@Test
+public void testSum() {
+assertEquals(5, 2 + 3);
+}
+}
+Run:
+mvn test
+Check:
+•
+target/test-classes/ → compiled test .class files
+•
+target/surefire-reports/ → .txt or .xml test results If test fails → corresponding log and failure trace shown
+•
+Handling Errors in pom.xml
+•
+Typos in version numbers or missing repositories cause BUILD FAILURE
+•
+Maven shows precise error in console
+•
+Fix the dependency tag → re-run mvn clean install
+•
+Adding Resource Files
+Put config.properties inside:
+src/main/resources/config.properties
+To read:
+InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties");
+After build, check target/classes/ → file should exist there.
+•
+Multi-Module and Parent Projects
+Structure:
+parent/
+├── pom.xml (packaging: pom)
+├── core/
+| └── pom.xml
+└── web/
+└── pom.xml
+•
+Parent pom.xml defines <modules> and common dependencies
+•
+Each submodule builds independently into its target/ directory
+•
+Executable JARs
+Add to pom.xml:
+<build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-jar-plugin</artifactId>
+<configuration>
+<archive>
+<manifest>
+<mainClass>com.example.Main</mainClass>
+</manifest>
+</archive>
+</configuration>
+</plugin>
+</plugins>
+</build>
+Run:
+mvn package
+java -jar target/myapp.jar
+•
+Building a WAR File
+Create a Maven web project with structure:
+src/main/webapp/
+└── WEB-INF/web.xml
+Add:
+<packaging>war</packaging>
+Command:
+mvn package
+Generates target/mywebapp.war → deploy on Tomcat server.
+•
+Scenario-Based Questions:
+•
+If my error is about:
+Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile
+[ERROR] -> [Help 1]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -X switch.
+How can I resolve it using maven terminal?
+•
+A dependency you added is not recognized by the compiler. What steps would you take to confirm it is available in .m2 and listed in dependency tree?
+•
+A teammate sends a .patch file for a bug fix. How would you apply it and include it in your Maven build?
+•
+You have multiple JUnit test failures and want to rerun only failed tests. How would you approach this?
+•
+Your Maven build fails due to “Unsupported class version error.” What plugin and configuration would you review?
+•
+You need to change your Java application from a WAR to a standalone JAR. What pom.xml changes are needed?
+•
+You are required to change the default build output directory from target/ to build_output/. How would you configure it?
+•
+You want to skip tests during the Maven build. What command would you use?
+•
+How would you generate a site report (with test coverage, dependency analysis) for a Maven project?
+•
+How do you build a Java project using Maven, and what files are generated in the target/ folder after running mvn clean install?
+•
+How does Maven resolve dependency conflicts when two libraries use different versions of the same dependency, and how can you view and manage the dependency tree?
+•
+How do you write and run a JUnit test in a Maven project, and where are the compiled test classes and reports stored after running mvn test?
+•
+How can you create an executable JAR with a main method using Maven, and which plugin helps configure this behavior?
+•
+How do you install and use a custom third-party JAR file in your Maven project, and how can you confirm it’s included in the build and classpath?
+•
+How do you create a Maven web project that packages into a WAR file, and what is the standard folder structure for such a project?
+•
+What command do you use to build a WAR file in Maven, where is it generated, and how can you deploy it to a server like Apache Tomcat?
+•
+How do you add JSTL and servlet-api dependencies in a Maven web project, and why should the servlet API use provided scope instead of compile?
+•
+How do you set up a multi-module Maven web project with separate modules for core logic and web interface, and how are these modules built and connected?
+•
+How do you configure a Maven web project, and how does its packaging and execution differ from a traditional WAR-based application?
+Conclusion
+Mastering Maven empowers students to structure projects efficiently, manage complex dependencies, and automate testing and packaging. By practicing real-world scenarios—such as resolving build errors, handling resource files, applying patches, and deploying to servers—students gain valuable hands-on experience aligned with professional software development workflows. Maven not only streamlines builds but also enforces standardization and reusability across projects. Through Maven, students learn efficient project management, dependency control, multi-module integration, and reproducible builds. Understanding Maven’s lifecycle, plugin system, and error handling prepares students for professional DevOps and CI/CD workflows. This lab equips students with hands-on experience in packaging, testing, resolving conflicts, and deploying real-world Java and Web applications.
+Maven Project
+1. maven clean
+2. maven install
+3. maven test
+4. maven build
+5. run java application
+WEB-APP
+
+
+
+LAB ACTION PLAN FOR WEEK 5
+Objectives:
+Students will able to:
+•
+Learn how to pull, run, stop, start, remove, and inspect containers and images.
+•
+Gain the ability to create, monitor, and troubleshoot running containers.
+•
+Configure and manage networks for container communication.
+•
+Create and manage persistent storage for containers.
+•
+Learn how to list, remove, and manage images efficiently.
+Docker:
+Docker is an open-source platform that automates the process of building, packaging, and running applications inside lightweight, portable containers, ensuring they run consistently across different environments.
+Docker Images:
+A read-only template that contains the application code, runtime, libraries, and dependencies. It is like a blueprint for creating containers.
+Docker Containers:
+A running instance of a Docker image.
+Working with Docker CLI Commands:
+Docker CLI Commands with redis
+Step 1: Pull the redis Image
+Command:
+docker pull redis
+Step 2: Run a Redis Container
+Command:
+docker run --name my-redis -d redis
+What It Does:
+ Creates and starts a container named my-redis from the redis image.
+ The -d flag runs the container in the background.
+Step 3: Check Running Containers
+Command:
+docker ps
+What It Does:
+ Lists all running containers.
+Step 4: Access Redis
+Command:
+docker exec -it my-redis redis-cli
+Opens the Redis command-line tool (redis-cli) inside the container.
+Example Redis Commands:
+127.0.0.1:6379> SET name "Alice"
+OK
+127.0.0.1:6379> GET name
+"Alice"
+Step 5: Stop the Redis Container
+Command:
+docker stop my-redis
+What It Does:
+ Stops the Redis container but doesn’t delete it.
+Step 6: Restart the Redis Container
+Command:
+docker start my-redis
+What It Does:
+ Restarts the stopped container.
+Step 7: Remove the Redis Container
+Command:
+docker rm my-redis
+What It Does:
+ Deletes the container permanently.
+Step 8: Remove the Redis Image
+Command:
+docker rmi redis
+What It Does:
+ Deletes the Redis image from your local system.
+2.Working with Docker file
+A Docker file is a text file with instructions to create a custom Docker image.
+Step 1: Set Up Your Folder
+1. Windows:
+o Create a folder like C:\DockerProjects\Redis.
+o Open Git Bash and navigate to the folder:
+cd /c/DockerProjects/Redis
+2. Mac/Linux:
+o Create a folder:
+mkdir ~/DockerProjects/Redis
+cd ~/DockerProjects/Redis
+Step 2: Write the Dockerfile
+1. Inside the folder, create a file named Dockerfile (no extension).
+2. Add the following content:
+FROM redis:latest
+CMD ["redis-server"]
+Docker Commands (Step-by-step):
+1. docker build -t redisnew .
+What it does:
+ This creates (builds) a Docker image using the recipe (Dockerfile) in the current
+folder (.).
+ -t redisnew: Gives the image a name/tag ("redisnew"), so you can find it easily.
+2. docker run --name myredisnew -d redisnew
+What it does:
+ Starts a new container (mini computer) from the redisnew image.
+ --name myredisnew: Names the container "myredisnew" so it’s easy to identify.
+ -d: Runs the container in the background.
+3. docker ps
+What it does:
+ Shows a list of containers that are running right now.
+4. docker stop myredisnew
+What it does:
+ Stops the container named "myredisnew" (like turning off a computer).
+5. docker login
+What it does:
+ Logs you into your Docker Hub account, so you can upload images.
+6. docker ps -a
+What it does:
+ Shows a list of all containers, including stopped ones.
+7. docker commit 856ae4657fa9 snehal1729/redis1
+What it does:
+ Takes a snapshot (saves changes) of the container with ID 0e993d2009a1 and creates a
+new image called snehal1729/redis1.
+8. docker images
+What it does:
+ Lists all images saved on your system.
+9. docker push snehal1729/redis1
+What it does:
+ Uploads the image 1729/redis1 to Docker Hub, so others can download
+it.
+10. docker rm 856ae4657fa9
+What it does:
+ Deletes the container with ID 0e993d2009a1.
+11. docker rmi budarajumadhurika/redis1
+What it does:
+ Deletes the image budarajumadhurika/redis1 from your system.
+12. docker ps -a
+What it does:
+Shows all containers again to confirm changes.
+13. docker logout
+What it does:
+ Logs you out of Docker Hub.
+14. docker pull snehal1729/redis1
+What it does:
+ Downloads the image budarajumadhurika/redis1 from Docker Hub.
+15. docker run --name myredis -d snehal1729/redis1
+What it does:
+ Starts a new container using the image budarajumadhurika/redis1.
+16. docker exec -it myredis redis-cli
+What it does:
+ Opens the Redis command-line interface (like a terminal) inside the running container
+myredis.
+17. SET name "Abcdef"
+What it does:
+ Saves a key-value pair in Redis (key = name, value = Abcdef).
+18. GET name
+What it does:
+ Retrieves the value of the key name from Redis (it will return "Abcdef").
+19. exit
+What it does:
+ Exits the Redis CLI.
+20. docker ps -a
+What it does:
+ Shows all containers again to check their status.
+21. docker stop myredis
+What it does:
+ Stops the container myredis.
+22. docker rm 50a6e4a9c326
+What it does:
+ Deletes the container with ID 50a6e4a9c326.
+23. docker images
+What it does:
+ Lists all images again to confirm which ones remain.
+24. docker rmi snehal1729/redis1
+What it does:
+ Deletes the image budarajumadhurika/redis1 again.
+Step 3: Remove Login Credentials (Optional)
+If you no longer need to be logged in, you can log out:
+docker logout
+What It Does:
+ Logs you out from Docker Hub and removes your stored credentials.
+Scenario based Questions:
+1.Your application is running inside Docker, but you’re not sure if the container is active. Which command helps you check running containers?
+ANS. docker ps
+2. You notice one of your containers is consuming high CPU and want to stop it. How do you stop a running container named web_app?
+ANS. docker stop web_app
+3. You’ve written a Dockerfile in your project directory and want to build an image named myapi.
+What Docker CLI command do you use?
+ANS. docker build -t myapi .
+4. You want to run your web_app container and expose its internal port 5000 on host port 8080. Which command should you use?
+ANS. docker run -p 8080:5000 web_app
+5. Your container is running, but you want to go inside and debug it using a shell. What CLI command helps you enter the container’s shell?
+ANS. docker exec -it <container_name_or_id> bash
+6. You’ve built a few test images and want to delete one called old_api. How would you do this?
+ANS. docker rmi old_api
+7. Your app crashed in the container. You need to check the logs. How do you check this?
+ANS. docker logs <container_name_or_id>
+8. You want to start a container and let it run in the background. Which command should you use?
+ANS. docker run -d <image_name>
+9. You're not sure which container is using port 3000. How do you check?
+ANS. docker ps --filter "publish=3000"
+10. You built an image but forgot to tag it. How do you tag it now?
+ANS. docker tag <existing_image_id_or_name> <new_repo>:<new_tag>
+11. You want to export an image to a .tar file for offline transfer. How do you export it?
+ANS. docker save -o image.tar <image_name_or_id>
+12. You want to restart a container automatically if it crashes. What Docker CLI command do you use?
+ANS. docker run --restart unless-stopped <image_name>
+13. You want to see how much CPU/RAM each container uses. What Docker CLI command do you use? How to Control or Limit RAM in Docker? How to Measure Actual Memory Usage?
+ANS. docker stats
+docker run -m 512m <image>
+14. You want your container to run a shell command before starting the app. What do you include in docker file?
+ANS. CMD /bin/sh -c "your-command && exec your-app"
+15. You want to create a custom Nginx image with your static files. What do you do?
+ANS. FROM nginx:latest
+COPY ./static /usr/share/nginx/html
+Conclusion:
+Through this hands-on exploration of Docker commands and Dockerfile usage, students will get a clear picture about the end-to-end container workflow—from pulling images, creating and running containers, to customizing them with Dockerfiles. By practicing key commands such as docker build, docker run, docker ps, and docker exec, students will gain practical skills in managing containerized environments. The Dockerfile exercise reinforced the importance of layered builds, efficient image creation, and environment reproducibility. Overall, these activities strengthened the understanding of containerization principles, enabling building, testing and deploying applications in isolated, consistent environments.
+
+Transfer it to another machine with Docker Compose installed.
+Check that Nginx and Postgres work there as well.
+All services run correctly on the new host.
+. Insert some data into Postgres
+Then
+
+
+LAB ACTION PLAN FOR WEEK 7
+Objective:
+To enable students to:
+➢
+Understand the structure and lifecycle of a Maven project.
+➢
+Build and package Java and Web applications using Maven.
+➢
+Add dependencies using pom.xml, compile and test using plugins.
+➢
+Resolve errors and conflicts arising from dependency mismatches.
+➢
+Work with parent and multi-module Maven projects.
+➢
+Generate executable JARs and deployable WARs using Maven.
+Students must document observations, include screenshots of executions, and answer scenario-based questions after completing the tasks.
+1. Understanding Maven Project Structure
+Maven standardizes the project structure for both Java and web-based applications. src/
+├── main/
+│ ├── java/ → Application source code
+│ └── resources/ → Configuration files like config.properties
+└── test/
+├── java/ → Unit test source code
+└── resources/ → Test resources
+The compiled files and reports are generated in the target/ directory after a successful build.
+2. Steps to Perform Maven Build and Testing
+----mvn clean install
+•
+clean: Deletes the previous build (target/ folder)
+•
+install: Builds, tests, and installs the package to local .m2 repository
+After execution:
+•
+target/ folder contains compiled .class files and the final .jar or .war
+•
+Artifact is stored in: ~/.m2/repository/groupId/artifactId/version/
+Add a Dependency (e.g., Gson):
+In pom.xml:
+<dependency>
+<groupId>com.google.code.gson</groupId>
+<artifactId>gson</artifactId>
+<version>2.10</version>
+</dependency>
+After running:
+mvn clean install
+Check:
+•
+Gson JAR is downloaded to .m2/repository/com/google/code/gson/gson/
+•
+If version is wrong or not found → BUILD FAILURE with dependency resolution error.
+Creation of Maven Java Project
+Step 1. Open Eclipse IDE
+└── 1.1. Launch Eclipse workspace
+Step 2. Install Maven Plugin (if not installed)
+└── 2.1. Go to "Help" in the top menu
+└── 2.1.1. Click "Eclipse Marketplace"
+└── 2.1.2. Search for "Maven Integration for Eclipse"
+└── 2.1.3. Install the plugin if not already installed
+Step 3. Create a New Maven Project
+└── 3.1. File -> New -> Project...
+└── 3.1.1. Expand "Maven"
+└── 3.1.2. Select "Maven Project" and click "Next"
+Step 4. Set Project Configuration
+└── 4.1. Select workspace location (default or custom)
+└── 4.2. Click "Next"
+Step 5. Choose Maven Archetype
+└── 5.1. Select an archetype(e.g "org.apache.maven.archetypes -> maven-archetype-quickstart 1.4 ")
+└── 5.2. Click "Next"
+Step 6. Define Project Metadata
+└── 6.1. Group ID: (e.g., com.example)
+└── 6.2. Artifact ID: (e.g., my-maven-project)
+└── 6.3. Version: (default is usually fine)
+└── 6.4. Click "Finish"
+In Console, artifacts are grouped. When prompted with Y/N, type 'Y'.
+Step 7. Maven Project Created
+└── 7.1. Project structure is generated with a standard Maven layout
+└── 7.2. Includes:
+└── src/main/java (for Java source code)
+└── src/test/java (for test code)
+└── pom.xml (Maven configuration file)
+Step 8. Update Project Settings (if needed)
+└── 8.1. Right-click on the project -> Maven -> Update Project...
+└── 8.2. Ensure dependencies are up to date
+Step 9. Build and Run Maven Project
+└── 9.1. Right-click on App.java -> Run As -> Maven Clean
+└── 9.1.1. Right-click on App.java -> Run As -> Maven Install
+└── 9.1.2. Right-click on App.java -> Run As -> Maven Test
+└── 9.1.3. Right-click on App.java -> Run As -> Maven Build
+Step 10. In the Maven Build dialog:
+└── Enter Goals: clean install test
+└── Click on Apply -> Click on Run
+Step 11. Check console for BUILD SUCCESS message.
+Step 12. Run the application:
+└── Right-click on App.java -> Run As -> Java Application
+└── Output: "Hello World" displayed.
+Creation of Maven web Java Project
+Step 1: Open Eclipse
+└── 1.1 Launch Eclipse IDE.
+└── 1.2 Select or create a workspace.
+Step 2: Create a New Maven Project
+└── 2.1. File -> New -> Project...
+└── 2.1.1. Expand "Maven"
+└── 2.1.2. Select "Maven Project" and click "Next"
+Step 3: Choose Maven Archetype
+└── 3.1. Select an archetype(e.g "'org.apache.maven.archetypes' -> 'maven-archetype-webapp' 1.4 ")
+└── 3.2. Click "Next"
+Step 4: Configure the Maven Project
+└── 4.1 Group Id: Enter a group ID (e.g., com.example).
+└── 4.2 Artifact Id: Enter an artifact ID (e.g., my-web-app).
+└── 4.3 Click **Finish** to create the project.
+Step 5: Add Maven Dependencies
+└── 5.1 Open the **pom.xml** file in the Maven project.
+└── 5.2 Add the necessary dependencies for your web project (e.g., Servlet, JSP):
+Go to browser -> Open mvnrepository.com
+Search for 'Java Servlet API' -> Select the latest version.
+Copy the dependency code -> Paste it in MavenWeb’s pom.xml under the target folder
+└── Example:
+```xml
+<dependency>
+<groupId>javax.servlet</groupId>
+<artifactId>javax.servlet-api</artifactId>
+<version>4.0.1</version>
+<scope>provided</scope>
+</dependency>
+```
+Step 6:-. Configure server:
+└── Window -> Show View -> Servers
+└── Add server -> Select Tomcat v9.0 server -> Click Next
+└── Configure server options (e.g., ports, server location).
+Step 7:-. Modify 'tomcat-users.xml':
+└── Add role and user details under <tomcat-users> tag.
+Step 8:. Build the project:
+└── Right-click on index.jsp -> Run As -> Maven Clean
+└── Right-click on index.jsp -> Run As -> Maven Install
+└── Right-click on index.jsp -> Run As -> Maven Test
+└── Right-click on index.jsp -> Run As -> Maven Build
+Step 9. In the Maven Build dialog:
+└── Enter Goals: clean install test
+└── Click on Apply -> Click on Run
+Step 10. Check console for BUILD SUCCESS message.
+Step 11. Run the application:
+└── Right-click on index.jsp -> Run As -> Run on Server
+└── Select the Tomcat server -> Click on Finish
+Step 12. Output: "Hello World" webpage displayed.
+Note:-Now push yours Maven java project and Maven Web Project into your github
+3.
+Configure Java Version via Compiler Plugin
+In pom.xml:
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>3.11.0</version>
+<configuration>
+<source>17</source>
+<target>17</target>
+</configuration> </plugin>
+Check:
+•
+Run mvn package
+•
+Inspect generated JAR: jar tf target/myapp.jar
+4.
+JUnit Testing and Reports
+Place test files in src/test/java. Example:
+public class AppTest {
+@Test
+public void testSum() {
+assertEquals(5, 2 + 3);
+}
+}
+Run:
+mvn test
+Check:
+•
+target/test-classes/ → compiled test .class files
+•
+target/surefire-reports/ → .txt or .xml test results If test fails → corresponding log and failure trace shown
+5.
+Handling Errors in pom.xml
+➢
+Typos in version numbers or missing repositories cause BUILD FAILURE
+➢
+Maven shows precise error in console
+➢
+Fix the dependency tag → re-run mvn clean install
+6.
+Adding Resource Files
+Put config.properties inside:
+src/main/resources/config.properties
+To read:
+InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties");
+After build, check target/classes/ → file should exist there.
+7.
+Multi-Module and Parent Projects
+Structure:
+parent/
+├── pom.xml (packaging: pom)
+├── core/
+| └── pom.xml
+└── web/
+└── pom.xml
+➢
+Parent pom.xml defines <modules> and common dependencies
+➢
+Each submodule builds independently into its target/ directory
+8.
+Executable JARs
+Add to pom.xml:
+<build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-jar-plugin</artifactId>
+<configuration>
+<archive>
+<manifest>
+<mainClass>com.example.Main</mainClass>
+</manifest>
+</archive>
+</configuration>
+</plugin>
+</plugins>
+</build>
+Run:
+mvn package
+java -jar target/myapp.jar
+9.
+Building a WAR File
+Create a Maven web project with structure:
+src/main/webapp/
+└── WEB-INF/web.xml
+Add:
+<packaging>war</packaging>
+Command:
+mvn package
+Generates target/mywebapp.war → deploy on Tomcat server.
+10.
+Scenario-Based Questions:
+1.
+If my error is about:
+Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile
+[ERROR] -> [Help 1]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -X switch.
+How can I resolve it using maven terminal?
+ANS: mvn clean compile -X
+2.
+A dependency you added is not recognized by the compiler. What steps would you take to confirm it is available in .m2 and listed in dependency tree?
+ANS: Check if dependency JAR exists in local repo:
+~/.m2/repository/<groupId-path>/<artifactId>/<version>/
+3.
+A teammate sends a .patch file for a bug fix. How would you apply it and include it in your Maven build?
+Apply the patch in your project root using git
+git apply path/to/patchfile.patch
+You have multiple JUnit test failures and want to rerun only failed tests. How would you approach this?
+ANS: Use Maven’s -Dtest
+4.
+mvn test -Dsurefire.runOrder=failed
+5.
+Your Maven build fails due to “Unsupported class version error.” What plugin and configuration would you review?
+ANS: Check the maven-compiler-plugin Java version settings in pom.xml
+6.
+You need to change your Java application from a WAR to a standalone JAR. What pom.xml changes are needed?
+ANS:Modify pom.xml packaging:
+<packaging>jar</packaging>
+7.
+You are required to change the default build output directory from target/ to build_output/. How would you configure it?
+ANS: In pom.xml:
+<build>
+<directory>build_output</directory>
+</build>
+8.
+You want to skip tests during the Maven build. What command would you use?
+ANS: mvn clean install -DskipTests
+9.
+How would you generate a site report (with test coverage, dependency analysis) for a Maven project?
+ANS: mvn site
+10.
+How do you build a Java project using Maven, and what files are generated in the target/ folder after running mvn clean install?
+ANS: mvn clean install
+11.
+How does Maven resolve dependency conflicts when two libraries use different versions of the same dependency, and how can you view and manage the dependency tree?
+Maven uses nearest-wins strategy.
+mvn dependency:tree
+Use <dependencyManagement> in parent pom.xml to control versions explicitly.
+12.
+How do you write and run a JUnit test in a Maven project, and where are the compiled test classes and reports stored after running mvn test?
+ANS: Write test in src/test/java with proper JUnit annotations.
+Run tests with:
+mvn test
+Compiled tests: target/test-classes/
+13.
+How can you create an executable JAR with a main method using Maven, and which plugin helps configure this behavior?
+ANS: Use the maven-jar-plugin or maven-shade-plugin.
+14.
+How do you install and use a custom third-party JAR file in your Maven project, and how can you confirm it’s included in the build and classpath?
+ANS: mvn install:install-file -Dfile=path/to/jar -DgroupId=com.custom -DartifactId=custom-lib -Dversion=1.0 -Dpackaging=jar
+15.
+How do you create a Maven web project that packages into a WAR file, and what is the standard folder structure for such a project?
+ANS: In pom.xml
+<packaging>war</packaging>
+16.
+What command do you use to build a WAR file in Maven, where is it generated, and how can you deploy it to a server like Apache Tomcat?
+Build WAR:
+mvn clean package
+WAR generated at:
+target/yourproject.war
+Deploy by copying WAR to Tomcat's webapps/ folder or via Tomcat Manager.
+17.
+How do you add JSTL and servlet-api dependencies in a Maven web project, and why should the servlet API use provided scope instead of compile?
+Add JSTL and servlet-api dependencies; why servlet-api is
+<dependency>
+<groupId>javax.servlet</groupId>
+<artifactId>javax.servlet-api</artifactId>
+<version>4.0.1</version>
+<scope>provided</scope>
+</dependency>
+<dependency>
+<groupId>javax.servlet.jsp.jstl</groupId>
+<artifactId>javax.servlet.jsp.jstl-api</artifactId>
+<version>1.2.1</version>
+</dependency>
+18.
+How do you set up a multi-module Maven web project with separate modules for core logic and web interface, and how are these modules built and connected?
+ANS: Parent pom.xml with <modules> listing core and web modules.
+Core module: logic, packaged as jar.
+Web module: depends on core, packaged as war.
+mvn clean install
+19.
+How do you configure a Maven web project, and how does its packaging and execution differ from a traditional WAR-based application?
+ans: Uses packaging WAR.
+src/main/webapp folder contains web resources.
+Built WAR deployed to servlet container.
+Can use plugins like tomcat7-maven-plugin for execution.
+Conclusion
+Mastering Maven empowers students to structure projects efficiently, manage complex dependencies, and automate testing and packaging. By practicing real-world scenarios—such as resolving build errors, handling resource files, applying patches, and deploying to servers—students gain valuable hands-on experience aligned with professional software development workflows. Maven not only streamlines builds but also enforces standardization and reusability across projects. Through Maven, students learn efficient project management, dependency control, multi-module integration, and reproducible builds. Understanding Maven’s lifecycle, plugin system, and error handling prepares students for professional DevOps and CI/CD workflows. This lab equips students with hands-on experience in packaging, testing, resolving conflicts, and deploying real-world Java and Web applications.
+Multi-Model exercise:
+
+
+
+
+
+
+SBQs(week 8)
+1. Q: What is Jenkins primarily used for? A: Jenkins is used for Continuous Integration and Continuous Delivery (CI/CD) automation.
+2. Q: What is a feature of Jenkins? A: Automates building, testing, and deploying code using pipelines and plugins.
+3. Q: What is the default port on which Jenkins runs? A: Port 8080.
+4. Q: What can be integrated with Jenkins for version control? A: Git, GitHub, Bitbucket, GitLab, and SVN.
+5. Q: What is the purpose of Jenkins plugins? A: To extend Jenkins functionality and integrate external tools.
+6. Q: Which type of Jenkins job is best for one-off tasks or small scripts? A: Freestyle Project.
+7. Q: How can you manage sensitive information such as API keys in Jenkins? A: Use Credentials Manager to store and access them securely.
+8. Q: What does the "Blue Ocean" feature in Jenkins refer to? A: A modern, user-friendly UI for visualizing and managing pipelines.
+9. Q: What does the "Blue Ocean" feature in Jenkins refer to? A: It provides a graphical view of pipeline stages and builds.
+10. Q: Which Jenkins component allows distributed builds across multiple machines? A: Jenkins agents (nodes)
+11. Q: List five important Jenkins plugins for microservices CI/CD and their purposes. A: Git Plugin – Integrates Git repositories.
+Pipeline Plugin – Enables CI/CD pipeline scripting.
+Docker Plugin – Builds and deploys Docker containers.
+Kubernetes Plugin – Runs builds in Kubernetes pods.
+JUnit Plugin – Publishes and visualizes test results.
+12.
+Q: Steps to install a plugin via Jenkins UI and key considerations? A: Go to Manage Jenkins → Manage Plugins → Available.
+Search and install the plugin.
+Restart Jenkins.
+Check compatibility with Jenkins version and dependencies before installing.
+13.
+Q: Steps to install a plugin via Jenkins UI and key considerations? A:Navigate to Manage Jenkins → Manage Plugins → Available tab.
+Install selected plugin and restart Jenkins.
+Verify update logs and ensure version compatibility.
+14.
+Q: After installing the Git Plugin, how to configure it?
+A:Go to Manage Jenkins → Global Tool Configuration.
+Add Git installation path.
+In pipeline, use: git url: 'https://github.com/user/repo.git', credentialsId: 'git-creds'.
+15.
+Q: Common plugin issues and how to troubleshoot them? A: Issues: Dependency conflicts, version mismatches, plugin crashes.
+Fixes: Check Jenkins logs, update plugins, verify compatibility matrix, or rollback versions.
+Week 9: Pipeline Creation using script
+1.
+Evaluation of Jenkins pipeline.
+2.
+WORKING ON BUILD TRIGGERS FOR LAST JENKINS PIPILINE
+3.
+Hands-on practice on creation of scripted Jenkins pipeline.
+4.
+Take the screenshots for above task
+Procedure
+General :
+Description :- provide the description of the project
+Build triggers: here we can provide with build triggers of you choice
+Advance project option:
+Definition:
+Choose pipeline script
+Here code for pipeline -script
+Copy the code there
+-------------------------------------------------------------------------------------------------------------------------
+pipeline {
+agent any
+tools{
+maven 'MAVEN-HOME'
+}
+stages {
+stage('git repo & clean') {
+steps {
+//bat "rmdir /s /q mavenjava"
+bat "git clone provide your github link"
+bat "mvn clean -f mavenjava"
+}
+}
+stage('install') {
+steps {
+bat "mvn install -f mavenjava" #project name#
+}
+}
+stage('test') {
+steps {
+bat "mvn test -f mavenjava"
+}
+}
+stage('package') {
+steps {
+bat "mvn package -f mavenjava"
+}
+}
+}
+}
+Apply and save
+
+SBQ’s:
+1.
+Your manager asks you to clean the workspace before building — which stage in this pipeline takes care of it?
+Ans: The Build stage (inside the dir('selab-internal') block) runs mvn clean install, and additionally, the Checkout Code stage removes any existing folder with rmdir /s /q selab-internal, which ensures the workspace is cleaned before the build.
+2.
+The GitHub repository link is missing in the script — where exactly do you provide it?
+Ans: The GitHub link is provided in the Checkout Code stage in the line:
+git clone https://github.com/NaveenCK-10/selab-internal.git
+3.
+If Maven is not configured globally in Jenkins, which section of the pipeline will fail first?
+Ans: he pipeline will fail at the Build stage where Maven is invoked using:
+mvn clean install
+because Jenkins won’t be able to locate Maven without a global tool configuration.
+4.
+A teammate complains the pipeline is not creating .war files — which stage is responsible?
+Ans: The Package stage is responsible for creating the final .jar or .war artifacts using:
+mvn package
+5.
+Your test cases failed, but the pipeline still continued — how will Jenkins behave in the test stage?
+Ans: By default, if a Maven test fails, it throws an error and the pipeline stops. In our current script, the pipeline stops at the Test stage on failure, and subsequent stages (Package) are skipped.
+6.
+Instead of running nightly builds, you want this pipeline to trigger only when GitHub changes occur — where will you configure it?
+Ans: You configure it in Build Triggers → GitHub hook trigger for GITScm polling in Jenkins. Alternatively, a GitHub webhook can notify Jenkins to trigger the pipeline on every push.
+7.
+If you replace mvn clean with mvn compile, what difference will it make to the project build?
+Ans: mvn clean deletes previous build artifacts to avoid conflicts, while mvn compile only compiles the source code without cleaning previous outputs. Replacing clean with compile may lead to using old artifacts in the build.
+8.
+The project folder name is not mavenjava but studentapp — which parts of the script must you edit?
+Ans: Update all references of dir('selab-internal') to dir('studentapp') and also the rmdir /s /q and git clone folder name accordingly.
+9.
+If the install stage fails, will the test and package stages still run in this pipeline?
+Ans: No. In a declarative Jenkins pipeline, if a stage fails (here Build or Install), the following stages (Test and Package) are skipped automatically.
+10.
+A student asks where to add deployment steps to Tomcat after packaging — which is the best place in this script?
+Ans: Deployment steps should be added after the Package stage, ideally in a new stage called Deploy that runs commands like copying .war to Tomcat’s webapps directory.
+11.
+Why is tools { maven 'MAVEN-HOME' } used in this pipeline?
+Ans: It tells Jenkins which Maven installation to use so that Maven commands like mvn clean install can run properly.
+12.
+If GitHub credentials are private, how can you secure them in the git repo & clean stage?
+Ans: We can store GitHub credentials in Jenkins Credentials and reference them using credentialsId in the git command:
+git branch: 'main', credentialsId: 'github-credentials-id', url: 'https://github.com/...'
+13.
+Which Jenkins plugin is needed to recognize the pipeline { ... } structure in this script?
+Ans: We need the Pipeline plugin (also called Workflow plugin) to understand the pipeline { ... } structure.
+14.
+In Windows, the script uses bat commands — what change would you make if Jenkins runs on Linux?
+Ans: If Jenkins runs on Linux, we should replace all bat commands with sh commands.
+For example: 'mvn clean install'
+15.
+How will you modify the pipeline to stop execution if the GitHub clone command fails?
+Your project lead asks you to print a welcome message in Jenkins to confirm the pipeline is working — how would you script it?
+Ans: We can add || exit 1 at the end of the git clone command so Jenkins stops immediately if cloning fails. Or we can use checkout step which fails the stage automatically on error.
+16.
+A teammate forgot to pull the latest GitHub code before building; how can you fix this in your pipeline?
+Ans: We can add an initial stage like this:
+stage('Welcome') {
+steps {
+echo "Hello! Jenkins pipeline is running for selab-internal"
+}
+}
+It shows a friendly message in the console when the pipeline starts.
+17.
+Your Java file Hello.java must be compiled every time code is committed — how will you add this step?
+Ans: We can include mvn compile or mvn install in the Build stage. Since Maven automatically compiles Java files, every commit will trigger compilation when the pipeline runs.
+18.
+Tests should stop the pipeline if they fail — where will you put the mvn test command?
+Ans: Keep mvn test in the Test stage. By default, if any test fails, Maven returns an error, and Jenkins stops the pipeline automatically.
+19.
+Every evening at 6 PM your pipeline should run automatically — how can you set this in Jenkins?
+Ans: We can add a cron schedule in Jenkins Build Triggers. For example:
+0 18 * * *
+This runs the pipeline at 6:00 PM daily.
+20.
+You only want to package the project if compilation succeeds — how would you connect the stages?
+Ans: Jenkins declarative pipelines automatically stop stages on failure. So if Build (compile/install) fails, the Package stage will not run. This ensures packaging happens only after successful compilation.
+21.
+Your professor wants a .jar file generated for submission — what pipeline stage will you add?
+Ans: The .jar file is created in the Package stage using:
+mvn package
+It will be located in selab-internal/target/ after a successful build
+22.
+A Git clone step is failing due to wrong credentials — how would you secure and use them in your script?
+Ans: We should store GitHub credentials in Jenkins Credentials and use them in the pipeline:
+git branch: 'main', credentialsId: 'github-credentials-id', url: 'https://github.com/NaveenCK-10/selab-internal.git'
+This keeps credentials secure and allows Jenkins to clone private repos.
+23.
+A teammate wants to see the build number inside console logs — how do you print it in the pipeline?
+Ans: We can print the build number using the environment variable ${env.BUILD_NUMBER}. For example:
+echo " Build Number: ${env.BUILD_NUMBER}"
+It will appear in the console every time the pipeline runs.
+LAB ACTION PLAN FOR WEEK 10
+Working with minikube and Nagios
+1.
+Hands-on practice of creating, running and scaling pods in minikube.
+2.
+Running Nginx server on specified port number by explaining the Nginx monitoring tool
+3.
+Running Nagios server and Understanding the Monitoring tool using Docker.
+4.
+AWS-free Trier account Creation steps
+5.
+Upload the screenshots for the tasks
+Kubernetes:
+Kubernetes is a tool that automates how we run and manage applications inside the container.
+Dockers will only run containers, if in any case the container fails/stopped/killed, the docker will not help us, here is where Kubernetes plays an important role, Kubernetes cluster will be responsible in creating a new container and managing various containers.
+POD: In Kubernetes, a Pod is the smallest deployable unit that you can create and manage.
+Minikube: Minikube creates a VM on your local machine and deploys a simple Kubernetes cluster with one node. It's a lightweight implementation.Minikube is a version of Kubernetes. Nagios:
+Nagios is an open-source IT infrastructure monitoring tool. It monitors
+⚫
+Serrvers
+⚫
+Network devices
+⚫
+Applications and services
+It alerts admnistrators when issues occur and notifies when they are resolved.
+Step 1: Install Prerequisites
+Before installing Minikube, ensure the following are installed:
+1.
+Virtualization Support:
+o
+Verify virtualization is enabled:
+2.
+Hypervisor:
+o
+Minikube supports multiple hypervisors (e.g., Hyper-V, VirtualBox, or Docker as a driver).
+o
+Install one of the following:
+▪
+Hyper-V (pre-installed on Windows 10/11 Pro or Enterprise).
+▪
+Docker Desktop (if you want to use Docker as the driver).
+Step 2: Download Minikube
+1.
+Open a PowerShell or Command Prompt with administrator privileges.
+2.
+Download the latest Minikube executable using this command:
+3.
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-installer.exe
+4.
+Install Minikube by running the installer:
+5.
+.\minikube-installer.exe
+Step 3: Add Minikube to PATH
+If Minikube is not automatically added to your PATH during installation:
+1.
+Open System Properties → Environment Variables.
+2.
+Add the directory where Minikube is installed (e.g., C:\Program Files\Minikube) to your PATH variable.
+Step 4: Start Minikube
+1.
+Open a terminal (PowerShell or CMD). Do the following commands
+2.
+Start Minikube with a specified driver (e.g., Hyper-V, Docker, or VirtualBox). For example:
+o
+Hyper-V:
+o
+minikube start --driver=hyperv
+o
+Docker:
+o
+minikube start --driver=docker
+3.
+Verify Minikube is running:
+4.
+minikube status
+Step 5: Interact with Minikube
+kubectl is a command-line tool used in Kubernetes to interact with and manage Kubernetes clusters.
+Once Minikube is running:
+1.
+Use kubectl to interact with the cluster.
+o
+Install kubectl if not already installed:
+o
+minikube kubectl -- get pods -A
+o
+Or download it separately from the official Kubernetes site.
+2.
+Open the Minikube dashboard (optional):
+3.
+minikube dashboard
+Optional: Check Your Installation
+Run the following to verify the installation:
+Minikube version
+kubectl version --client
+Troubleshooting
+1.
+If Minikube fails to start:
+o
+Ensure your hypervisor (Hyper-V/Docker/VirtualBox) is installed and running.
+o
+Check the Minikube logs:
+o
+minikube logs
+2.
+Updating Minikube:
+3.
+minikube update-check
+4.
+minikube update
+Minikube Automation Steps
+Step 1: Start Minikube Cluster
+•
+Open your terminal and run the command:
+minikube start
+Step 2: Create and Manage Deployment
+1.
+Create an application in Kubernetes:
+o
+Command:
+kubectl create deployment mynginx--image=nginx
+if already created then kubectl set image deployment/myngnix nginx=nginx:latest
+o
+Verify the deployment using: Kubernetes responds by showing you a list that includes the names of your deployment groups
+kubectl get deployments
+▪
+Ensure mynginx appears in the output.
+Check the following commands:
+◼
+kubectl get pods
+◼
+kubectl describe pods
+2.
+Expose Deployment as a Service:
+o
+Command:
+kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
+Step 3: Scale the Deployment
+Command:Scales the Nginx deployment to 4 replicas (pods).
+kubectl scale deployment mynginx --replicas=4
+kubectl get service myngnix
+Step 4: Access the Nginx App
+1.
+Using Port Forwarding:
+o
+Command:
+kubectl port-forward svc/mynginx 8081:80
+▪
+Access the app via http://localhost:8081.
+If Error, use this option, Using Minikube Tunnel:
+o
+Start the tunnel:
+minikube tunnel
+o
+Retrieve the service URL:
+minikube service mynginx --url
+o
+Open the provided URL in your browser.
+o
+Open the kubernets dashboard
+⚫
+Open the minikube dashboard
+Minikube dashboard
+Step 5: Stop and Clean Up
+1.
+Stop Nginx Deployment:
+o
+Commands:
+kubectl delete deployment mynginx
+kubectl delete service mynginx
+2.
+Stop Minikube (Optional):
+o
+Command:
+minikube stop
+3.
+Delete Minikube Cluster (Optional):
+o
+Command:minikube delete
+Nagios Automation Steps
+Step 1: Pull the Nagios Docker Image
+•
+Open a terminal and run:
+docker pull jasonrivers/nagios:latest
+Step 2: Run Nagios
+•
+Command:
+docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest
+Step 3: Access Nagios Dashboard
+•
+Open your browser and navigate to:
+http://localhost:8888
+o
+Login Credentials:
+▪
+Username: nagiosadmin
+▪
+Password: nagios
+o
+Once logged in, explore:
+▪
+Hosts: View systems being monitored.
+▪
+Services: Check tasks being monitored (e.g., CPU usage).
+▪
+Alerts: Access recent notifications.
+Step 4: Monitoring Host Details
+1.
+Navigate to the Host Information Page:
+o
+Select a host from the Hosts menu.
+2.
+Key Details:
+o
+Host Status: Indicates if the system is UP or DOWN.
+o
+Metrics: View CPU usage, memory status, and network activity.
+o
+Actions: Reschedule checks, disable notifications, or schedule downtime.
+Step 5: Stop and Remove Nagios
+1.
+Stop the Container:
+o
+Command:
+docker stop nagiosdemo
+2.
+Delete the Container:
+o
+Command:
+docker rm nagiosdemo
+3.
+Remove the Image (Optional):
+o
+List images:
+docker images
+o
+Delete the Nagios image:
+docker rmijasonrivers/nagios:latest
+4.
+Observe the docker containers in DockerHub, we can see the latest Nagios Installed running on port:8888
+-------------------------------------------------------------------------------------------------------------------------------
+Steps for AWS-free trier account creation
+•
+open https://aws.amazon.com
+•
+click on create AWS account
+•
+Provide email id and name details for AWS account creation then a screen will appear as below
+•
+Enter verification code received in your mail
+•
+Provide your contact details and agree Terms and conditions, then click on create
+•
+Provide billing details, click on verify and continue
+•
+Amazon chagres 2 rs and it will be credit back into your account once verification is over
+•
+Once payment success a screen appear as below, provide your working contact number after selecting country, and click on send SMS after entering the details
+•
+Provide verification code received in your mobile
+•
+Now select basic plan and click on complete sign up
+•
+Now a screen appear as follows then click on AWS management console
+•
+You will navigating to the aws page ..where you need to Select role as Academic/Researcher and interest as DevOps and click on submit
+•
+Sign into AWS console as Root user
+•
+A console screen appears aws will appear
+SBQ’s
+1.
+Your Pod keeps restarting repeatedly. What will you do?
+ANS: Check logs: kubectl logs <pod-name>
+Describe pod: kubectl describe pod <pod-name>
+Look for crash loop or configuration issues.
+2.
+A Kubernetes pod is stuck in a "Pending" state. What could be the possible reasons, and how would you troubleshoot it?
+ANS : • Causes: No resources, nodeSelector mismatch, or PVC issues.
+• Troubleshoot: kubectl describe pod <pod-name>
+3. How would you debug a failed deployment in Kubernetes?
+ANS : Check rollout status: kubectl rollout status deployment <deployment-name>
+Check events: kubectl describe deployment <deployment-name>
+4.
+You have a Kubernetes Deployment with multiple replicas, and some pods are failing health checks. How would you identify the root cause and fix it?
+ANS : Run: kubectl describe pod <pod-name>
+Inspect readiness/liveness probe errors.
+Check container logs.
+5.
+How do you roll back a faulty deployment?
+ANS : kubectl rollout undo deployment <deployment-name>
+6.
+How do you debug a running Pod?
+ANS : kubectl exec -it <pod-name> -- /bin/bash
+Or check logs: kubectl logs <pod-name>
+7.
+You need to expose a local service externally.How to do?
+ANS : kubectl expose deployment myapp --type=NodePort --port=80
+minikube service myapp --url
+8.
+How to Start and stop Nagios
+ANS : docker start nagiosdemo
+docker stop nagiosdemo
+9.
+You installed Nagios but the web interface shows “Unable to connect to Nagios process”.how to resolve this?
+ANS : Restart container.
+Check configuration errors inside container logs.
+10.
+You added a new host in Nagios, but it’s not appearing on the web interface.how to check?
+ANS : Check nagios.cfg and included configs.
+Ensure config file syntax is correct.
+Restart Nagios container.
+11.
+How can you check whether Nagios is running properly?
+ANS : docker ps
+12.
+How do you view Nagios logs in real-time
+ANS : docker logs -f nagiosdemo
+13. What are the advantages of using Nagios? ANS : Real-time monitoring Custom alerting system
+Supports plugins for extensibility Easy visualization through Web UI
+Conclusion: In this week we learnt how to deploy pods in minikube and how to monitor our local system using Nagios tool and will know how to create the aws free trier account.
+LAB REPORT – WEEK 11: Jenkins CI/CD Integration using GitHub Webhooks and Email Notifications
+Viva Questions & Answers
+1.
+Q: What is Continuous Integration (CI)?
+A: CI is the practice of automatically integrating code changes from multiple developers into a shared repository several times a day.
+2.
+Q: What is Continuous Deployment (CD)?
+A: CD automates the release of validated code to production after successful testing and integration.
+3.
+Q: What is the role of Jenkins in a CI/CD pipeline?
+A: Jenkins automates building, testing, and deploying code, ensuring a continuous integration and delivery workflow.
+4.
+Q: What is a webhook in GitHub?
+A: A webhook is an HTTP callback that notifies Jenkins when an event (like a push) occurs in a GitHub repository.
+5.
+Q: Why are webhooks used in Jenkins integration?
+A: They remove the need for periodic polling and allow immediate triggering of builds upon a GitHub event.
+6.
+Q: What are the different types of build triggers available in Jenkins?
+A: Build triggers include: Poll SCM, Build periodically, Trigger builds remotely, and GitHub webhook triggers.
+7.
+Q: What is the difference between polling and webhook triggers?
+A: Polling checks for changes at fixed intervals, while webhooks notify Jenkins instantly when changes occur.
+8.
+Q: What is ngrok and why is it used in Jenkins–GitHub integration?
+A: ngrok is a tunneling tool that exposes local servers to the internet, allowing GitHub to send webhooks to a local Jenkins instance.
+9.
+Q: How does ngrok help in setting up webhooks for Jenkins running locally?
+A: ngrok creates a public HTTPS URL that forwards requests to the local Jenkins, enabling GitHub to reach it.
+10.
+Q: Why do we configure email notifications in Jenkins?
+A: To receive automated build success or failure updates, helping developers monitor build status efficiently.
+
+
+
+
+
+
+
+
+
+
+Scenario-Based Questions and Answers
+1. You have a simple index.html file on your laptop and you launched an EC2 instance with Amazon Linux 2. The instance is running but when you open the public IP in browser, the page doesn’t load. What steps will you take to host the index.html? Answer: Install Apache → Start service → Copy index.html to /var/www/html/ → Allow port 80 in Security Group.
+2. You deployed your index.html to /var/www/html/ directory on EC2, but the web page still isn’t loading. What are two possible issues you would check? Answer: Check if Apache is running and if port 80 is open in Security Group.
+3. You installed Apache HTTP server on EC2 to host index.html, but the service stops after instance reboot. What command should you run to ensure it auto-starts on boot? Answer: sudo systemctl enable httpd
+4. You are deploying a Maven web application onto an EC2 instance. Maven is not installed on the instance. What commands or steps will you follow to install Maven on Amazon Linux/Ubuntu EC2? Answer:
+•
+Amazon Linux: sudo yum install maven -y
+•
+Ubuntu: sudo apt update && sudo apt install maven -y
+5. You built a Maven project on EC2, and a .war file generated inside target/. You want to deploy it using Tomcat. Where will you place the .war file and why? Answer: Place it in /usr/share/tomcat/webapps/ — Tomcat auto-deploys .war files from there.
+6. Your Maven web app is deployed to Tomcat on EC2, but accessing it via browser gives 404 error. What configuration or path issues will you check? Answer: Check if .war deployed correctly, Tomcat logs, context path, and service status.
+7. You can access your web application locally on the EC2 instance using curl localhost:8080 but not from your browser. What AWS setting is likely missing or misconfigured? Answer: Security Group missing inbound rule for port 8080.
+8. You have deployed your web app on EC2 successfully, but after shutting down your local Wi-Fi and reconnecting, the public IP changed and the app is not opening. What AWS feature helps avoid this issue? Answer: Use an Elastic IP.
+9. You want to automate deployment of your index.html whenever you restart the EC2 instance. Which EC2 feature can be used to run commands automatically during instance setup? Answer: Use User Data script.
+10. Your Maven application needs external dependencies during build but EC2 has no internet. What AWS service or change can allow the EC2 instance to download dependencies securely? Answer: Use a NAT Gateway or VPC Endpoint for internet access.
