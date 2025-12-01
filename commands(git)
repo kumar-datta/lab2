@@ -1,0 +1,86 @@
+Scenario based questions on basic git commands
+1. You made changes to one file in the above project but haven’t staged them yet. You realize they were a mistake. What Git command will you use to discard the local changes?
+git checkout -- <filename>
+2. You accidentally ran git add file1.txt (note instead of file.txt consider one file from above project), but you’re not ready to commit yet. How do you remove it from the staging area without losing the changes?
+git reset file1.txt
+3. You made a commit but typed the wrong commit message. You haven’t pushed it yet. How do you fix it?
+git commit --amend
+4. You want to view the commit history of the current branch in a readable format. What Git command should you use?
+git log --oneline --graph
+5. After cloning a repo, how can you set your name and email globally for all Git repositories?
+git config --global user.name "Name"
+git config --global user.email "Mail Id"
+6. You’ve made some edits to your files but haven’t staged them. How can you view the changes?
+git diff
+7. You’re on the main branch but need to switch to feature/login. What command do you
+git checkout -b feature -branch
+8. You deleted the feature-ui branch by mistake. You haven’t pushed the deletion. How
+git branch -d feature-branch
+9. You’ve made some commits locally and now want to upload them to the remote repository. What do you run?
+git push
+10. How can you fetch the latest changes from the remote repository without merging them automatically?
+git fetch
+11. You’re on the main branch and want to start working on a new feature called search-filter. What command do you use?
+git checkout -b search-filter
+12. You committed a file containing an API key and want to completely remove it from the repo's history. What should you do?
+git filter-branch --force
+13. You want to see all the branches that exist both locally and on the remote. What
+git branch -a
+14. You’re on main and want to merge the completed feature/signup branch into it. What command do you use?
+git merge feature/signup
+15. You tried to merge two branches and Git reported a conflict in app.js. What are the general steps to resolve it?
+git add app.js
+git commit
+16. You don’t want Git to track changes to .log files or node_modules/. How do you achieve this?
+echo "*.log" >>.gitignore
+echo "node_modules/".gitignore
+17. You're investigating a bug and want to know who last changed line 25 in script.py. What command do you use?
+git blame -L 25,25 script.py
+18. You’re in the middle of working on a file but need to switch branches quickly. What do you do to save your work?
+git stash
+19. You previously ran git stash and now want to restore those changes. What command do you use?
+git stash pop
+20. The feature/test branch is no longer needed. How do you delete it locally?
+git branch -d feature/test
+21. You just merged the feature-ui branch into main. You want to clean up your local branches. How do you safely delete feature-ui?
+git reset file1.txt
+22. You created a branch feature-experiment, made some changes, but now realize the code is no longer needed. You want to delete it, even though it hasn’t been merged. What command will you use?
+git branch -D featureexperiment
+23. You're currently on the feature-login branch and want to delete feature-ui. What must you ensure before running the delete command?
+git checkout main
+git branch -d feature-ui
+24. You want to delete bugfix-footer, but you're unsure if it's been merged. What should you do before deleting it?
+git branch --merged | grep
+25. You finished working on feature-a, feature-b, and feature-c. All have been merged into main. How do you delete them in one command?
+Scenario based questions on working with remote repository using Git commands
+1. Specify the git command when you're starting work on a project and need to clone a remote repository to your local machine.
+git clone <repo url>
+2. Specify the git command if you want to see the remotes that are connected to your local repository.
+git remote -v
+3. Specify the git command if you want to add a new remote repository to your local repository.
+git remote add <name> <url>
+4. Specify the git command to remove a remote repository from your local configuration:
+git remote remove <name>
+5. Specify the git command if you want to rename an existing remote:
+git remote rename <old-name><new-name>
+6. Specify the git command to fetch updates from the remote repository but not merge them into your local branch.
+git fetch
+7. Specify the git command to pull the latest changes from the remote repository and merge them into your local branch.
+git pull
+8. Specify the git command to push your local commits to a remote repository.
+git push
+9. Specify the git command to when pushing for the first time and want to set the remote branch you are pushing to.
+git push -u origin main
+10. Specify the git command to change the URL of a remote (e.g., after changing the remote repository address).
+git remote set -url origin https://github.com/url
+11. Specify the git command if you want to list all branches on the remote repository.
+git branch -r
+12. Specify the git command if a branch was deleted on the remote but still shows up locally.
+git fetch -p
+13. Specify the git command to fetch a specific branch from a remote.
+git fetch <remotename><branchname>
+14. Specify the git command if you want to see detailed information about a remote repository.
+git remote show <remotename>
+15. Specify the git command if you want to rebase your local branch onto a remote branch (this can be useful to keep your history linear)
+git pull --rebase origin <branchname>
+
