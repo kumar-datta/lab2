@@ -1,0 +1,13 @@
+docker pull jasonrivers/nagios:latest
+
+docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest
+
+•	Open your browser and navigate to:
+http://localhost:8888
+o	Login Credentials:
+	Username: nagiosadmin
+	Password: nagios
+o	Once logged in, explore:
+	Hosts: View systems being monitored.
+	Services: Check tasks being monitored (e.g., CPU usage).
+	Alerts: Access recent notifications.
