@@ -1,0 +1,116 @@
+# -----------------------------
+# PART 1 — BASIC DOCKER COMMANDS
+# -----------------------------
+
+docker pull redis
+# → Downloads the official Redis image from Docker Hub.
+
+docker run --name my-redis -d redis
+# → Creates and runs a Redis container in background.
+
+docker ps
+# → Shows running containers.
+
+docker exec -it my-redis redis-cli
+# → Opens Redis CLI inside the running container.
+
+SET name "Nandu"
+GET name
+# → Tests Redis commands inside container.
+
+exit
+# → Exit Redis CLI.
+
+docker stop my-redis
+# → Stops the running Redis container.
+
+docker ps -a
+# → Shows all containers (running + stopped).
+
+docker start my-redis
+# → Starts a previously stopped container.
+
+docker rm my-redis
+# → Removes the container permanently.
+
+docker rmi redis
+# → Deletes the Redis image from your machine.
+
+
+# ---------------------------------
+# PART 2 — DOCKERFILE & CUSTOM IMAGE
+# ---------------------------------
+
+mkdir C:\DockerProjects\Redis
+cd C:\DockerProjects\Redis
+# → Creates a working folder for Dockerfile.
+
+# Dockerfile content:
+# FROM redis:latest
+# CMD ["redis-server"]
+# → Defines a custom Redis-based image.
+
+docker build -t redisnew .
+# → Builds a custom image named "redisnew".
+
+docker images
+# → Lists all Docker images stored locally.
+
+
+# ------------------------------
+# PART 3 — RUN CUSTOM DOCKER IMAGE
+# ------------------------------
+
+docker run --name myredisnew -d redisnew
+# → Runs a container using the custom image.
+
+docker ps
+# → Shows active containers.
+
+docker stop myredisnew
+# → Stops the custom container.
+
+docker rm myredisnew
+# → Deletes the custom container.
+
+
+# ------------------------------
+# PART 4 — PUSH IMAGE TO DOCKER HUB
+# ------------------------------
+
+docker login
+# → Login to Docker Hub account.
+
+docker commit <container_id> <dockerhub_username>/redis1
+# → Converts a container into an image for Docker Hub.
+
+docker push <dockerhub_username>/redis1
+# → Uploads the image to Docker Hub.
+
+
+# ------------------------------
+# PART 5 — PULL IMAGE & RUN AGAIN
+# ------------------------------
+
+docker rmi <dockerhub_username>/redis1
+# → Removes the image locally.
+
+docker pull <dockerhub_username>/redis1
+# → Downloads the image from Docker Hub.
+
+docker run --name myredis -d <dockerhub_username>/redis1
+# → Runs a new container from your Docker Hub image.
+
+docker exec -it myredis redis-cli
+# → Connects to Redis CLI inside the new container.
+
+SET name "Nandu"
+GET name
+# → Tests Redis data again.
+
+exit
+# → Exit Redis CLI.
+
+docker stop myredis
+docker rm myredis
+# → Stops and removes final container.
