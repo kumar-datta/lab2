@@ -1,0 +1,250 @@
+https://github.com/gnavneet41/E-ticketing.git
+**/*
+
+⭐ WEEK 11 – CI/CD Using Jenkins (Webhooks + Email Notification)
+
+This week teaches how to automate your entire build process using Jenkins.
+
+The two main goals are:
+
+✔ CI – Continuous Integration (Trigger Jenkins automatically using GitHub Webhooks)
+✔ CD – Continuous Delivery (Automatically build/test your project)
+✔ Email Notification – Send success/failure emails to developers
+
+Let’s break it down in the simplest way.
+
+🚀 1. What is CI/CD?
+CI – Continuous Integration
+
+When a developer pushes code to GitHub → Jenkins automatically builds the project.
+
+CI ensures:
+
+Code is integrated frequently
+
+Errors are caught early
+
+No manual building required
+
+CD – Continuous Delivery
+
+After building and testing, Jenkins automatically:
+
+Packages the project (JAR/WAR)
+
+Prepares it for deployment
+
+You don’t have to manually run Maven commands.
+
+🚀 2. How Jenkins CI/CD Pipeline Works
+Simple flow:
+Developer pushes code → GitHub → Webhook → Jenkins Pipeline → Build → Test → Email Alert
+
+
+This is the heart of DevOps automation.
+
+⭐ 3. Jenkins Webhook (CI Trigger)
+❓ What is a webhook?
+
+A webhook is a signal from GitHub to Jenkins saying:
+
+“Hey! New code was pushed. Start the pipeline now.”
+
+Without webhooks → Jenkins must manually check GitHub.
+With webhooks → Jenkins instantly starts when code is updated.
+
+⭐ 4. Steps to Configure Webhook (Simple)
+✔ Step 1: In Jenkins
+
+Inside your Jenkins job:
+
+Open Configure
+
+Go to Build Triggers
+
+Tick:
+
+GitHub hook trigger for GITScm polling
+
+✔ Step 2: Get Jenkins webhook URL
+
+Your Jenkins webhook URL is:
+
+http://<public-ip>:8080/github-webhook/
+
+
+(If you use localhost → use ngrok)
+
+✔ Step 3: In GitHub
+
+Open your repository
+
+Go to Settings → Webhooks
+
+Click Add Webhook
+
+Paste Jenkins URL:
+
+http://<public-ip>:8080/github-webhook/
+
+
+Select:
+
+Content Type: application/json
+
+Trigger: Just push events
+
+Click Add Webhook
+
+🎉 Now when you push to GitHub → Jenkins automatically builds.
+⭐ 5. Jenkins Pipeline Script (Example)
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/yourusername/yourrepo.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+    }
+
+    post {
+        success {
+            mail to: 'developer@gmail.com',
+                 subject: 'Build Successful',
+                 body: 'Your Jenkins build passed successfully!'
+        }
+
+        failure {
+            mail to: 'developer@gmail.com',
+                 subject: 'Build Failed',
+                 body: 'Your Jenkins build failed. Check console logs.'
+        }
+    }
+}
+
+
+This pipeline:
+
+Pulls code from GitHub
+
+Builds using Maven
+
+Runs tests
+
+Sends success/failure emails
+
+⭐ 6. Jenkins Email Notification Setup
+✔ Step 1: Install Email Plugin
+
+Go to Manage Jenkins → Manage Plugins
+
+Install: Email Extension Plugin
+
+✔ Step 2: Configure SMTP
+
+Go to:
+
+Manage Jenkins → Configure System
+
+Scroll to Extended Email Notification
+
+Enter:
+
+SMTP Server: smtp.gmail.com
+
+Port: 465 or 587
+
+Use SSL: Yes
+
+Username: Your gmail
+
+App Password: (Required — not normal password)
+
+✔ Step 3: Add Default Recipients
+
+Example:
+
+dattagoud@gmail.com
+
+
+Click Test Configuration → You should receive a test email.
+
+⭐ 7. How Email Notifications Work in Pipeline
+
+In the pipeline’s post block:
+
+post {
+    success {
+        mail to: 'team@gmail.com',
+             subject: 'Build Success',
+             body: 'Your Jenkins build completed without errors.'
+    }
+    failure {
+        mail to: 'team@gmail.com',
+             subject: 'Build Failed',
+             body: 'Your Jenkins build failed. Please check logs.'
+    }
+}
+
+
+So whenever your build:
+
+passes → sends "Success" email
+
+fails → sends "Failure" email
+
+This is real CI/CD used in companies.
+
+⭐ 8. What to Say in Viva
+❓ What is a webhook?
+
+A webhook is an automatic trigger from GitHub to Jenkins whenever code is pushed.
+
+❓ Why do we use webhooks?
+
+To automatically start Jenkins pipelines without manual action.
+
+❓ What is CI?
+
+Automatically integrating and building code after every commit.
+
+❓ What is CD?
+
+Automatically packaging/deploying the application after a successful build.
+
+❓ How does Jenkins send email?
+
+Using SMTP configuration + email-ext plugin.
+
+⭐ 9. Summary (Short & Clean)
+
+Week-11 teaches:
+
+✔ GitHub → Jenkins automatic build (webhook)
+✔ Jenkins pipeline using Maven
+✔ Email notifications on success/failure
+✔ Complete CI/CD automation
+✔ Real DevOps flow used in companies
+
+If you want, I can also prepare:
+
+📝 Week-11 Lab Record (ready to write)
+🎤 Week-11 Viva Questions & Answers
+🔧 Week-11 Full Pipeline Script (custom for your repo)
+
+Just tell me:
+👉 "give week 11 lab record" or "give viva"
