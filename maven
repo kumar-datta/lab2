@@ -2,3 +2,4 @@ org.apache.maven
 
 group id  com.test.kumar
 artifact kumar
+clean install test
