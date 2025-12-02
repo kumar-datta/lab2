@@ -1,0 +1,42 @@
+open terminal 
+go to the pemfile location terminal
+ssh -i "se_key.pem" ubuntu@ec2-3-231-228-64.compute-1.amazonaws.com
+paste the copied ssh command (terminal activated)
+sudo apt update
+sudo apt-get install docker.io
+sudo apt install nano
+sudo apt install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
+
+check inbound rules
+
+| Type  | Port | Source    |
+| ----- | ---- | --------- |
+| HTTPS | 443  | 0.0.0.0/0 |
+| HTTP  | 80   | 0.0.0.0/0 |
+| SSH   | 22   | 0.0.0.0/0 |
+
+systemctl status nginx
+cd /var/www/html/(going to web directory in nginx)
+ls
+sudo rm index.nginx-debian.html
+sudo nano index.html
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to My AWS Website</title>
+</head>
+<body>
+    <h1>Hello from AWS EC2!</h1>
+    <p>Your website is hosted successfully.</p>
+</body>
+</html>
+paste this code
+sudo systemctl restart nginx
+
+http://<your-public-ip>/    ex: http://3.231.228.64/
+
+
